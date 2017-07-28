@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/item_back_run" android:title="后台运行"></item>  
+    <item android:id="@+id/item_exit" android:title="退出应用程序"></item>  
+    
+</menu>

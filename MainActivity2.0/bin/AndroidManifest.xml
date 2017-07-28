@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.grehousemon"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.grehousemon.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.grehousemon.ControlActivity"
+            android:label="@string/title_activity_control"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.example.grehousemon.ManualActivity"
+            android:label="@string/title_activity_manual"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.example.grehousemon.AutoActivity"
+            android:label="@string/title_activity_auto"
+            android:screenOrientation="landscape" >
+        </activity>
+        <service android:name="com.example.service.RevService" >
+            <intent-filter>
+                <action android:name="com.example.service.Rev_Service" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.service.InsertService" >
+            <intent-filter>
+                <action android:name="com.example.service.Insert_Service" />
+            </intent-filter>
+        </service>
+        <!-- <service android:name="com.example.service.InsertDayService" >
+            <intent-filter>
+                <action android:name="com.example.service.Insert_Day_Service" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.service.InsertMonthService" >
+            <intent-filter>
+                <action android:name="com.example.service.Insert_Month_Service" />
+            </intent-filter>
+        </service> -->
+        <activity
+            android:name="com.example.grehousemon.AbstractActivity"
+            android:label="@string/title_activity_abstract" >
+        </activity>
+
+        <receiver android:name="com.example.Tools.MyReceiver" >
+            <intent-filter>
+                <action android:name="INSERTDAY" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="INSERTMONTH" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

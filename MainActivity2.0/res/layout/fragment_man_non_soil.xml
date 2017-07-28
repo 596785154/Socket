@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#282828" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Switch
+                    android:id="@+id/switch_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_wind"
+                    android:layout_alignBottom="@+id/textView_wind"
+                    android:layout_centerHorizontal="true"
+                    android:checked="false"
+                    android:thumb="@drawable/switch_style" />
+
+                <TextView
+                    android:id="@+id/textView_wind"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="19dp"
+                    android:layout_toLeftOf="@+id/switch_light"
+                    android:gravity="center"
+                    android:text="光照设置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ECAD10"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Switch
+                    android:id="@+id/switch_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_toRightOf="@+id/textView_wind"
+                    android:checked="false"
+                    android:thumb="@drawable/switch_style" />
+
+                <TextView
+                    android:id="@+id/textView_wind"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="310dp"
+                    android:gravity="center"
+                    android:text="通风设置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ECAD10"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Switch
+                    android:id="@+id/switch_sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_toRightOf="@+id/textView_sun"
+                    android:checked="false"
+                    android:thumb="@drawable/switch_style" />
+
+                <TextView
+                    android:id="@+id/textView_sun"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="311dp"
+                    android:gravity="center"
+                    android:text="遮阳设置"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ECAD10"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+       
+    </LinearLayout>
+
+</RelativeLayout>
